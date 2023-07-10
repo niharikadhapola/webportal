@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>View Demand</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    </head>
+    <body>
+        <app-header></app-header>
+        <div class="container">
+            <div class="myCard">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="myLeftCtn">
+                            <form #scheduleForm="ngForm" class="myForm text-center" (ngSubmit) = "onSubmit(scheduleForm.value)">
+                            <header>View Schedule</header>
+                            <div class="form-group">
+                                <label style="float:left">Enter Start Date </label>
+                                <br>
+                                <br>
+                                <input type="date" id="startDate" name="startDate" placeholder="dd/mm/yyyy" ngModel required class="myInput" style="float:left">
+                                <br>
+                                <br>
+
+                                <br>
+                            </div>
+                            <input type="submit" class="butt" style="float: left;" value="Check Schedule">
+                            <br>
+                            <br>
+                            <br>
+                        </form>
+                        
+                        
+                        <a href="pharmacy/home"><button class="butt" style="float: left;">Back</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="myRightCtn">
+                            
+                                <img src="../../assets/viewScheduleInternal.jpg" height="400" width="300" alt="Calender">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

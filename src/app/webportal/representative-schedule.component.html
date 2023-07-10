@@ -1,0 +1,48 @@
+<app-header></app-header>
+<html>
+<head>
+
+    <title>Return Schedule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center" style="color:rgb(91, 194, 241); margin-top: 5%;"><b>Schedule</b></h1>
+    <br/>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="table-secondary" style="text-align:center">Rep Name</th>
+                <th class="table-secondary" style="text-align:center">Doctor's Name</th>
+                <th class="table-secondary" style="text-align:center">Treating Ailment</th>
+                <th class="table-secondary" style="text-align:center">Medicine</th>
+                <th class="table-secondary" style="text-align:center">Slot</th>
+                <th class="table-secondary" style="text-align:center">Date</th>
+                <th class="table-secondary" style="text-align:center">Doctor Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let rep of representativeScheduleDisplay" style="border:1px solid rgb(252, 253, 253)">
+                <td class="table-light" style="text-align:center">{{rep.name}}</td>
+                <td class="table-light" style="text-align:center">{{rep.doc}}</td>
+                <td class="table-light" style="text-align:center">{{rep.ailment}}</td>
+                <td class="table-light" style="text-align:center">{{rep.meds}}</td>
+                <td class="table-light" style="text-align:center">{{rep.slot}}</td>
+                <td class="table-light" style="text-align:center">{{rep.date}}</td>
+                <td class="table-light" style="text-align:center">{{rep.number}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="text-align:center;">
+        <a href="pharmacy/viewSchedule"><button type="button" class="btn btn-outline-info">Back</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+</head>
+<body>
+
+<div class="wrapper bg-white">
+    <div class="h1 text-center">Login</div>
+    <div class="h6 text-muted text-center pt-2">Login using company ID and password</div>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+        <div class="form-group py-2">
+            <div class="input-field"> 
+                <span class="far fa-user p-2"></span> 
+                <input id="userid" type="text" name="userid" placeholder="User ID" required ngModel /> 
+            </div>
+            <div class="form-group py-1 pb-2">
+                <div class="input-field"> <span class="fas fa-lock p-2"></span>
+                    <input id="upassword" type="password" name="upassword" placeholder="Password" required ngModel /> 
+                </div>
+            </div>
+            <input type="submit" name="submit" value="Log In" class="btn btn-block text-center my-3" /><br>
+            <div class="text-center d-flex justify-content-between mt-4"><p style="color: red;">{{errorMsg}}</p></div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
